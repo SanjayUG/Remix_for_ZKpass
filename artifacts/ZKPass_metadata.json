@@ -1,0 +1,143 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "string",
+						"name": "uid",
+						"type": "string"
+					}
+				],
+				"name": "UIDRegistered",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "uid",
+						"type": "string"
+					}
+				],
+				"name": "checkUID",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "uid",
+						"type": "string"
+					}
+				],
+				"name": "registerUID",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "proof",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "uid",
+						"type": "string"
+					}
+				],
+				"name": "verifyProof",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Combined contract for ZKPass authentication system, handling both UID registration and ZKP verification",
+			"kind": "dev",
+			"methods": {
+				"checkUID(string)": {
+					"details": "Check if a UID exists",
+					"params": {
+						"uid": "The unique identifier to check"
+					},
+					"returns": {
+						"_0": "bool True if the UID exists, false otherwise"
+					}
+				},
+				"registerUID(string)": {
+					"details": "Register a new UID",
+					"params": {
+						"uid": "The unique identifier to register"
+					}
+				},
+				"verifyProof(string,string)": {
+					"details": "Verify a ZKP proof",
+					"params": {
+						"proof": "The proof to verify",
+						"uid": "The unique identifier to check against"
+					},
+					"returns": {
+						"_0": "bool True if the proof is valid, false otherwise"
+					}
+				}
+			},
+			"title": "ZKPass",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Zkpass.sol": "ZKPass"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Zkpass.sol": {
+			"keccak256": "0x3725dddf8afad3f50f29cbaee6a63c652d12d2a56011f08891d4dcafbb340f52",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://59c7b70882df52ec34b34a4f586e71e5e66011e329d2c6fb2a75c0b1b169f204",
+				"dweb:/ipfs/QmdBuNweyx3rLSta7JHPLwe24PfNFvWpuEdcm1oi9MPwBL"
+			]
+		}
+	},
+	"version": 1
+}
